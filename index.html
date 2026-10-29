@@ -355,6 +355,44 @@
     .contact-grid{grid-template-columns:1fr;}
     section{padding:2.1rem 1rem;}
   }
+
+  /* MOBILE FIX: keep Work Experience cards inside the viewport */
+  @media (max-width: 768px) {
+    #work,
+    #work .flow,
+    #work .node,
+    #work .node-card,
+    #work .node-head,
+    #work .node-head-left,
+    #work .node-head-left > div:last-child,
+    #work .node-details,
+    #work .node-details-inner {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    #work .node-card {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #work .node-role,
+    #work .node-co,
+    #work .node-date,
+    #work .node-details li {
+      overflow-wrap: anywhere;
+    }
+
+    #work .node-date {
+      white-space: normal;
+    }
+
+    #work .co-logo,
+    #work .co-logo img {
+      max-width: 100%;
+    }
+  }
+
 </style>
 </head>
 <body>
